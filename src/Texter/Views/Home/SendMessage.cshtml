@@ -1,0 +1,21 @@
+﻿@model Texter.Models.Message
+
+<h2>Send a New Message</h2>
+<hr />
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(model => model.To)
+    @Html.DropDownListFor(model => model.To, ViewBag.ContactNumber as SelectList)
+    @Html.LabelFor(model => model.From)
+    @Html.TextBoxFor(model => model.From)
+    @Html.LabelFor(model => model.Body)
+    @Html.TextBoxFor(model => model.Body)
+    <input type="submit" value="Send!" />
+}
+
+
+<label>Contact</label>
+
+
+
+@Html.ActionLink("Back home", "Index")

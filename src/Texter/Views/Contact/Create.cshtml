@@ -1,0 +1,17 @@
+﻿@model  Texter.Models.Contact
+@using System.Security.Claims
+
+
+<h4>Add new post</h4>
+@using (Html.BeginForm())
+{
+    <label>Name</label>
+    @Html.TextBoxFor(model => model.Name)
+
+    <label>Phone Number</label>
+    @Html.TextBoxFor(model => model.Phone)
+
+
+    <input type="submit" value="Add Contact" />
+}
+<p>@Html.ActionLink("Home", "Index")</p>

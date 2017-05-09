@@ -1,0 +1,15 @@
+﻿
+@model IEnumerable<Texter.Models.Contact>
+
+
+
+
+@foreach (var contact in Model)
+{
+    <div>
+        <h4> @Html.DisplayFor(modelSubscriber => contact.Name)</h4>
+        <h4> @Html.DisplayFor(modelSubscriber => contact.Phone)</h4>
+       
+    </div>
+}
+
